@@ -1,28 +1,560 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page d'accueil</title>
-    <link rel="stylesheet" href="css\styleAccueil.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Page d'accueil</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Accueil</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <h2>Les différents sites personnels de l'équipe du serveur 174</h2>
-        <ul>
-          <li><a href="illan.gab.html">Illan GABARRA</a></li>
-          <li><a href="kylian.gac.html">Kylian GACHET</a></li>
-        </ul>
-      </section>
-    </main>
-  </body>
+<html lang="en">
+
+<head>
+
+	<!--- basic page needs
+   ================================================== -->
+	<meta charset="utf-8">
+	<title>Kylian GACHET</title>
+	<meta name="author" content="Kylian">
+	<meta name="description"
+		content="Here is my website which presents my profile, my skills, my background, my hobbies, my projects and a form if you want to contact me.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+	<!-- CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Siteicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="k_icon.png">
+
+	<!-- Preload
+   ================================================== -->
+	<link rel="preload" href="/images/intro-car.webp" as="image">
+
+</head>
+
+<body id="top">
+
+	<!-- nav bar
+   ================================================== -->
+	<nav id="nav">
+		<ul>
+			<li><a href="#intro">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#resume">Resume</a></li>
+			<li><a href="#hobbies">Hobbies</a></li>
+			<li><a href="#project">Project</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</nav> <!-- /nav bar -->
+
+
+	<!-- intro section
+   ================================================== -->
+
+	<section id="intro">
+
+		<div class="intro-overlay"></div>
+
+		<div class="intro-content">
+			<div class="row">
+
+				<div class="col-twelve">
+					<!--- Hello, World. -->
+					<h5></h5>
+					<span class="containerTypewriter">
+						<h1 class="typewriter">I'm Kylian Gachet.</h1>
+					</span>
+
+					<p class="intro-position">
+						<span>Student</span>
+						<span>Developer</span>
+					</p>
+
+					<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+
+				</div>
+
+			</div>
+		</div> <!-- /intro-content -->
+
+		<ul class="intro-social">
+			<li>
+				<a href="https://www.facebook.com/profile.php?id=100005221727621">
+					<i class="fa fa-facebook-square"></i>
+					<div class="intro-icon-text-form">Facebook</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/GachetKylian">
+					<i class="fa fa-twitter-square"></i>
+					<div class="intro-icon-text-form">Twitter</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/kyln.ght/">
+					<i class="fa fa-instagram"></i>
+					<div class="intro-icon-text-form">Instagram</div>
+				</a>
+			<li>
+				<a href="https://www.linkedin.com/in/kyliangachet/">
+					<i class="fa fa-linkedin-square"></i>
+					<div class="intro-icon-text-form">LinkedIn</div>
+				</a>
+			</li>
+		</ul> <!-- /intro-social -->
+
+	</section> <!-- /intro -->
+
+
+	<!-- about section
+   ================================================== -->
+	<section id="about">
+
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>About</h5>
+				<h1>Let me introduce myself.</h1>
+
+				<div class="intro-info">
+
+					<img src="images/profile-pic.webp" alt="Profile Picture">
+
+					<p class="lead">My name is Kylian GACHET, I am 18 years old and I am currently a student in a
+						computer science degree.
+						My goal is to become a Data Analyst and the new challenges motivate me and make me determined to
+						improve and develop
+						my skills.</p>
+				</div>
+
+			</div>
+		</div> <!-- /section-intro -->
+
+		<div class="row about-content">
+
+			<div class="col-six tab-full">
+
+				<h3>Profile</h3>
+				<p class="fitting-fullname">I am a passionate and experienced developer, quite proficient in various
+					programming
+					languages, and passionate about Japanese culture.</p>
+
+				<ul class="info-list">
+					<li>
+						<strong>Fullname:</strong>
+						<span>kylian Gachet</span>
+					</li>
+					<li>
+						<strong>Birth Date:</strong>
+						<span>April 25, 2004</span>
+					</li>
+					<li>
+						<strong>Job:</strong>
+						<span>Student, Developer</span>
+					</li>
+					<li>
+						<strong>Know-how</strong>
+						<span>Respect of deadlines, distribution of tasks</span>
+					</li>
+					<li>
+						<strong>Email:</strong>
+						<span>kyliangachet@gmail.com</span>
+					</li>
+
+				</ul> <!-- /info-list -->
+
+			</div>
+
+			<div class="col-six tab-full">
+
+				<h3>Skills</h3>
+				<p>I've been passionate about programming for many years and have acquired strong skills in
+					several programming languages such as SQL, Java and Python. </p>
+
+				<ul class="skill-bars">
+					<li>
+						<div class="progress percent90"><span>90%</span></div>
+						<strong>HTML | CSS</strong>
+					</li>
+					<li>
+						<div class="progress percent85"><span>85%</span></div>
+						<strong>Java</strong>
+					</li>
+					<li>
+						<div class="progress percent70"><span>70%</span></div>
+						<strong>SQL</strong>
+					</li>
+					<li>
+						<div class="progress percent95"><span>95%</span></div>
+						<strong>Python</strong>
+					</li>
+					<li>
+
+						<div class="progress percent75"><span>75%</span></div>
+						<strong>Office</strong>
+					</li>
+
+				</ul> <!-- /skill-bars -->
+
+			</div>
+
+		</div>
+
+		<div class="row button-section">
+			<div class="col-twelve">
+				<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
+				<a href="cv/CV_BUT_Info_Kylian_Gachet.pdf" title="Download CV" class="button button-primary">Download
+					CV</a>
+			</div>
+		</div>
+
+	</section> <!-- /Section-->
+
+
+	<!-- resume Section
+   ================================================== -->
+	<section id="resume" class="grey-section">
+
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>Resume</h5>
+				<h1>More of my credentials.</h1>
+
+				<p class="lead">I've had the opportunity to work in a company and to follow formations
+					that have contributed to my professional and personal development, as well as to develop
+					my skills in the computer and digital field.</p>
+
+			</div>
+		</div> <!-- /section-intro-->
+
+		<div class="row resume-timeline">
+
+			<div class="col-twelve resume-header">
+
+				<h2>Work Experience</h2>
+
+			</div> <!-- /resume-header -->
+
+			<div class="col-twelve">
+
+				<div class="timeline-wrap">
+
+				</div> <!-- /timeline-block -->
+
+				<div class="timeline-block">
+
+					<div class="timeline-ico">
+						<i class="fa fa-graduation-cap"></i>
+					</div>
+
+					<div class="timeline-header">
+						<h3>Versatile Employee</h3>
+						<p>June 2022 - August 2022</p>
+					</div>
+
+					<div class="timeline-content">
+						<h4>Very Rewarding</h4>
+						<p>Despite the fact that it is not in the digital and informatic sector, I still learned a lot
+							and it
+							was able to train me in teamwork as well as in time management because we had a limited time
+							for
+							each task to perform.</p>
+					</div>
+
+				</div> <!-- /timeline-wrap -->
+
+			</div> <!-- /col-twelve -->
+
+		</div> <!-- /resume-timeline -->
+
+		<div class="row resume-timeline">
+
+			<div class="col-twelve resume-header">
+
+				<h2>Education</h2>
+
+			</div> <!-- /resume-header -->
+
+			<div class="col-twelve">
+
+				<div class="timeline-wrap">
+
+					<div class="timeline-block">
+
+						<div class="timeline-ico">
+							<i class="fa fa-briefcase"></i>
+						</div>
+
+						<div class="timeline-header">
+							<h3>Bachelor Degree</h3>
+							<p>July 2015 - Present</p>
+						</div>
+
+						<div class="timeline-content">
+							<h4>University of Life</h4>
+							<p>I am currently in my first year of computer science.</p>
+						</div>
+
+					</div> <!-- /timeline-block -->
+
+					<div class="timeline-block">
+
+						<div class="timeline-ico">
+							<i class="fa fa-briefcase"></i>
+						</div>
+
+						<div class="timeline-header">
+							<h3>High School Diploma</h3>
+							<p>September 2019 - June 2022</p>
+						</div>
+
+						<div class="timeline-content">
+							<h4>Pope Clement High School</h4>
+							<p>Having chosen the Digital and Computer Science (NSI) major, I had the opportunity to
+								build
+								and develop my computer science skills when I was in 11th and 12th grade. This was the
+								beginning
+								of a passion for me and a deep interest in programming and computer science in general.
+								In addition,
+								my English level improved a lot thanks to the Language, Literature and Culture (LLCE)
+								course.</p>
+						</div>
+
+					</div> <!-- /timeline-wrap -->
+
+				</div> <!-- /col-twelve -->
+
+			</div> <!-- /resume-timeline -->
+
+		</div> <!-- /row resume-timeline -->
+
+	</section> <!-- /resume -->
+
+
+	<!-- Hobbies Section
+   ================================================== -->
+	<section id="hobbies">
+
+		<div class="row section-intro">
+
+			<div class="col-twelve">
+
+				<h5>Hobbies</h5>
+				<h1>Here are my hobbies and passions.</h1>
+
+				<p class="lead">I am passionate about literature and enjoy spending time discovering new books and
+					authors.
+					Japanese culture also interests me a lot and I love learning more about their history, art, and way
+					of life.
+					Big data is another area I am passionate about and I love working with data sets to derive useful
+					information.
+					Finally, I am also athletic and enjoy playing basketball and badminton in particular.</p>
+
+			</div>
+		</div>
+
+		<!-- Horizontal -->
+		<div class="slider">
+			<div class="slide">
+				<img src="/images/shibuya.webp" alt="Shibuya" />
+			</div>
+			<div class="slide">
+				<img src="images/manga.webp" alt="Manga" />
+			</div>
+			<div class="slide">
+				<img src="images/bigdata.webp" alt="BigData" />
+			</div>
+			<div class="slide">
+				<img src="/images/literature.webp" alt="Literature" />
+			</div>
+			<div class="slide">
+				<img src="images/anime.webp" alt="Anime" />
+			</div>
+		</div>
+
+	</section> <!-- /hobbies -->
+
+
+	<!-- Project Section
+   ================================================== -->
+	<section id="project" class="grey-section">
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>Future</h5>
+				<h1>My Upcoming Projects.</h1>
+
+				<p class="lead">I have always been fascinated by the many possibilities offered by the world of computer
+					science and, more specifically, by
+					data analysis. This is why I chose to pursue my studies in this field and become a <strong>Data
+						Analyst</strong>.
+					To be more precise, I'll tell you about my path so far and my plans for the future.</p><br>
+				<p class="lead">I finished my general BAC with the two specialties
+					Numerical and Computer Science (NSI) and Language, Literature and Culture in English (LLCE), and I
+					decided to continue with a <strong>University
+						Bachalor of Technology (BUT) in Computer Science</strong> to develop my skills.</p><br>
+				<p class="lead">I also wish to pursue a Master in Data Science after my three years of BUT Informatic,
+					in
+					order to deepen my knowledge and develop new skills. I hope it will give you an idea of my ambitions
+					and my future career path.</p>
+
+			</div>
+		</div> <!-- /section-intro-->
+	</section>
+
+
+	<!-- contact
+   ================================================== -->
+	<section id="contact">
+
+		<div class="row section-intro">
+			<div class="col-twelve">
+
+				<h5>Contact</h5>
+				<h1>I'd Love To Hear From You.</h1>
+
+				<p class="lead">If you wish to contact me for information or advice, you can do so via this form.
+					Your comments and suggestions are very precious and will be very useful for my personal development.
+				</p>
+
+
+			</div>
+		</div> <!-- /section-intro -->
+
+		<div class="row contact-form">
+
+			<div class="col-twelve">
+
+				<!-- form -->
+				<form name="contactForm" id="contactForm" method="post" action="php/envoiemail.php">
+					<fieldset>
+
+						<div class="form-field">
+							<input name="contactName" type="text" id="name" placeholder="Name" value="" minlength="2"
+								required="">
+						</div>
+						<div class="form-field">
+							<input name="contactEmail" type="email" id="email" placeholder="Email" value="" required="">
+						</div>
+						<div class="form-field">
+							<input name="contactSubject" type="text" id="subject" placeholder="Subject" value="">
+						</div>
+						<div class="form-field">
+							<textarea name="contactMessage" id="message" placeholder="Message" rows="10" cols="50"
+								required=""></textarea>
+						</div>
+						<div class="form-field">
+							<button id="submit-button" class="submitform" type="submit" name="submit">Submit</button>
+
+						</div>
+
+					</fieldset>
+				</form> <!-- Form End -->
+
+				<script>
+
+
+				</script>
+
+
+			</div> <!-- /col-twelve -->
+
+		</div> <!-- /contact-form -->
+
+		<div class="row contact-info">
+
+			<div class="col-four tab-full">
+
+				<div class="icon">
+					<i class="icon-pin"></i>
+				</div>
+
+				<h5>Where to find me</h5>
+
+				<p>
+					11 allée du Professeur <br>
+					Camille Soula, Toulouse<br>
+					31400 France
+				</p>
+
+			</div>
+
+			<div class="col-four tab-full collapse">
+
+				<div class="icon">
+					<i class="icon-mail"></i>
+				</div>
+
+				<h5>Email Me At</h5>
+
+				<p>kyliangachet@gmail.com<br>
+				</p>
+
+			</div>
+
+			<div class="col-four tab-full">
+
+				<div class="icon">
+					<i class="icon-phone"></i>
+				</div>
+
+				<h5>Call Me At</h5>
+
+				<p>Phone: (+33) 06 62 61 00 84<br>
+				</p>
+
+			</div>
+
+		</div> <!-- /contact-info -->
+
+	</section> <!-- /contact -->
+
+
+	<!-- footer
+   ================================================== -->
+
+	<footer>
+		<div class="row">
+
+			<div class="col-six tab-full pull-right social">
+
+				<ul class="footer-social">
+					<li>
+						<a href="https://www.facebook.com/profile.php?id=100005221727621">
+							<i class="fa fa-facebook-square"></i>
+							<div class="footer-icon-text-form">Facebook</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/GachetKylian">
+							<i class="fa fa-twitter-square"></i>
+							<div class="footer-icon-text-form">Twitter</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/kyln.ght/">
+							<i class="fa fa-instagram"></i>
+							<div class="footer-icon-text-form">Instagram</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/kyliangachet/">
+							<i class="fa fa-linkedin-square"></i>
+							<div class="footer-icon-text-form">LinkedIn</div>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+
+			<div class="col-six tab-full">
+				<div class="copyright">
+					<span>© Copyright Kylian GACHET 2023.</span>
+					<span><a href="legal.html">Legal Information</a></span>
+				</div>
+			</div>
+
+		</div> <!-- /row -->
+	</footer>
+
+
+</body>
+
 </html>
