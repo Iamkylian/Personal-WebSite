@@ -1,69 +1,141 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  nav li {
-    margin-right: 20px;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    color: #ff0;
-  }
-  
-  main {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  section {
-    margin-bottom: 40px;
-  }
-  
-  section h2 {
-    margin-bottom: 20px;
-  }
-  
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff0;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.355;
+  letter-spacing: -.1rem;
+  display: inline-block;
+}
+
+.button.stroke,
+button.stroke {
+	background: 0 0 !important;
+	border: 3px solid #313131;
+	line-height: 4.8rem
+}
+
+.button.stroke:hover,
+button.stroke:hover {
+	border: 6px solid #e40013;
+	color: #e40013
+}
+
+.col-twelve {
+	width: 100%
+}
+
+.button-section {
+	text-align: left;
+}
+
+.button-section .button {
+	width: 250px
+}
+
+.button-section [class*=col-] .button:first-child {
+	margin-right: 4rem
+}
+
+.button,
+a.button,
+button {
+	display: inline-block;
+	font-family: poppins-bold, sans-serif;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	height: 4.4rem;
+	line-height: 5.4rem;
+	padding: 0 3rem;
+	margin: 0 .3rem 1.2rem 0;
+	background: #d8d8d8;
+	color: #313131;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	white-space: nowrap;
+	border: none;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	border-radius: 2.5rem
+}
+
+.pos-illan {
+  position:;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1
+}
