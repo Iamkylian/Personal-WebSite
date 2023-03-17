@@ -84,7 +84,8 @@ button.stroke {
 .button.stroke:hover,
 button.stroke:hover {
 	border: 6px solid #e40013;
-	color: #e40013
+	color: #e40013;
+  transition-delay: 300ms;
 }
 
 .col-twelve {
@@ -131,11 +132,22 @@ button {
 }
 
 .pos-illan {
-  position:;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
   z-index: -1
+}
+.image-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
