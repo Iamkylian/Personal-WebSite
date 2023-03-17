@@ -85,7 +85,7 @@ button.stroke {
 button.stroke:hover {
 	border: 6px solid #e40013;
 	color: #e40013;
-  transition-delay: 300ms;
+  transition-delay: 200ms;
 }
 
 .col-twelve {
@@ -150,4 +150,10 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.div-container-two{
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
 }
