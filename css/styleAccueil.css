@@ -9,8 +9,8 @@ header {
   background-color: #333;
   color: #fff;
   padding: 20px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  place-items: center ;
 }
 
 nav ul {
@@ -33,9 +33,10 @@ nav a {
 nav a:hover {
   color: #ff0;
 }
-
 main {
-  max-width: 960px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(1, 1fr);
   margin: 0 auto;
   padding: 20px;
 }
@@ -74,6 +75,14 @@ h1 {
   display: inline-block;
 }
 
+#resume{
+  max-width: 960px;
+}
+
+.lead{
+  font-size: large;
+}
+
 .button.stroke,
 button.stroke {
 	background: 0 0 !important;
@@ -83,9 +92,8 @@ button.stroke {
 
 .button.stroke:hover,
 button.stroke:hover {
-	border: 6px solid #e40013;
+	border: 3px solid #e40013;
 	color: #e40013;
-  transition-delay: 200ms;
 }
 
 .col-twelve {
@@ -98,10 +106,6 @@ button.stroke:hover {
 
 .button-section .button {
 	width: 250px
-}
-
-.button-section [class*=col-] .button:first-child {
-	margin-right: 4rem
 }
 
 .button,
@@ -140,8 +144,8 @@ button {
   z-index: -1
 }
 .image-container {
-  width: 200px;
-  height: 200px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -156,4 +160,19 @@ img {
   display: grid;
   place-items: center;
   grid-template-columns: repeat(2, 1fr);
+}
+.pos-illan{
+  padding-right: 20px;
+}
+.section-container-three{
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.div-container-header{
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items:  center;
 }
