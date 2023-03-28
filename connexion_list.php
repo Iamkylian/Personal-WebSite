@@ -28,18 +28,16 @@ $machines = $stmt_machines->fetchAll(PDO::FETCH_ASSOC);
     <table>
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Date et heure</th>
                 <th>Adresse IP</th>
+                <th>Date et heure</th>
                 <th>Machine</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($connexions as $connexion): ?>
                 <tr>
-                    <td><?php echo $connexion['id']; ?></td>
-                    <td><?php echo $connexion['date_connexion']; ?></td>
-                    <td><?php echo $connexion['adresse_ip']; ?></td>
+                    <td><?php echo $connexion['ip_adress']; ?></td>
+                    <td><?php echo $connexion['connection_time']; ?></td>
                     <td><?php echo $connexion['hostname']; ?></td>
                 </tr>
             <?php endforeach; ?>
