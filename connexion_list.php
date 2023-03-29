@@ -4,16 +4,15 @@ $dbhost = 'localhost';
 $dbname = 'save_connexions';
 $dbuser = 'webuser';
 $dbpass = 'JeSuisLeBoss$';
-$port = '5432';
 
-$db = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $username, $password);
+$db = new PDO("pgsql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
 
 // Récupération des connexions
 $stmt_connexions = $db->query("SELECT * FROM Connexion ORDER BY id DESC");
 $connexions = $stmt_connexions->fetchAll(PDO::FETCH_ASSOC);
 
 // Récupération des machines
-$stmt_machines = $db->query("SELECT * FROM Machine");
+$stmt_machines = $db->query("SELECT * FROMsudo iptables -L -n Machine");
 $machines = $stmt_machines->fetchAll(PDO::FETCH_ASSOC);
 ?>
 

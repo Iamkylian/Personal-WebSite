@@ -1,13 +1,13 @@
 <?php
 
 // Connexion à la base de données
-$dbhost = 'localhost';
+$dbhost = '127.0.0.1';
 $dbname = 'save_connexions';
 $dbuser = 'webuser';
 $dbpass = 'JeSuisLeBoss$';
 $port = '5432';
 
-$db = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $username, $password);
+$db = new PDO("pgsql:host=$dbhost;port=$port;dbname=$dbname", $dbuser, $dbpass);
 
 // Récupération des informations de l'utilisateur
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
