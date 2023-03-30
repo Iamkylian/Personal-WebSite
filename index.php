@@ -17,9 +17,6 @@ $user_agent = $_SERVER['HTTP_USER_AGENT'];
 $ip_adress = $_SERVER['REMOTE_ADDR'];
 $hostname = gethostbyaddr($ip_adress);
 
-if ($hostname == $ip_address) {
-  $hostname = null;
-}
 // Extraction du navigateur et du système d'exploitation
 $browser = '';
 $os = '';
@@ -69,41 +66,27 @@ if (preg_match('/windows|win32|win64/', $user_agent)) {
   $os = 'Debian';
 } elseif (preg_match('/suse/', $user_agent)) {
   $os = 'SUSE';
-} elseif (preg_match('/mandriva/', $user_agent)) {
-  $os = 'Mandriva';
-} elseif (preg_match('/gentoo/', $user_agent)) {
-  $os = 'Gentoo';
-} elseif (preg_match('/slackware/', $user_agent)) {
-  $os = 'Slackware';
 } elseif (preg_match('/centos/', $user_agent)) {
   $os = 'CentOS';
-} elseif (preg_match('/linux/', $user_agent)) {
+} elseif (preg_match('/curl/', $user_agent)) {
+  $os = 'Curl';
+}elseif (preg_match('/linux/', $user_agent)) {
   $os = 'Linux';
 } elseif (preg_match('/macintosh|mac os x|mac_powerpc/', $user_agent)) {
   $os = 'Mac OS X';
-} elseif (preg_match('/android/', $user_agent)) {
-  $os = 'Android';
-} elseif (preg_match('/iphone|ipod|ipad/', $user_agent)) {
-  $os = 'iOS';
-} elseif (preg_match('/blackberry/', $user_agent)) {
-  $os = 'BlackBerry';
 } else {
   $os = 'Unknown';
 }
 
 // Insertion des informations dans la base de données
-if ($hostname != null) {
-  $query = "INSERT INTO Machine (hostname, navigateur, os) VALUES ('" . mysqli_real_escape_string($conn, $hostname) . "', '" . mysqli_real_escape_string($conn, $browser) . "', '" . mysqli_real_escape_string($conn, $os) . "')";
-  mysqli_query($conn, $query);
-}
-if ($hostname != null) {
-  $query = "INSERT INTO Connexion (ip, hostname, date) VALUES ('" . mysqli_real_escape_string($conn, $ip_adress) . "', '" . mysqli_real_escape_string($conn, $hostname) . "', NOW())";
-  mysqli_query($conn, $query);
-}
-else {
-  $query = "INSERT INTO Connexion (ip,date) VALUES ('" . mysqli_real_escape_string($conn, $ip_adress) . "', NOW())";
-  mysqli_query($conn, $query);
-}
+
+$query = "INSERT INTO Machine (hostname, navigateur, os) VALUES ('" . mysqli_real_escape_string($conn, $hostname) . "', '" . mysqli_real_escape_string($conn, $browser) . "', '" . mysqli_real_escape_string($conn, $os) . "')";
+mysqli_query($conn, $query);
+
+
+$query = "INSERT INTO Connexion (ip, hostname, date) VALUES ('" . mysqli_real_escape_string($conn, $ip_adress) . "', '" . mysqli_real_escape_string($conn, $hostname) . "', NOW())";
+mysqli_query($conn, $query);
+
 header("Location: homepage.html");
 exit;
 ?>

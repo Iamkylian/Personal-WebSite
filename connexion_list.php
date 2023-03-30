@@ -1,7 +1,5 @@
 <?php
 
-ini_set('display_errors', 1);
-
 // Connexion à la base de données
 $dbhost = 'localhost';
 $dbname = 'save_connexions';
@@ -138,7 +136,7 @@ $machines = mysqli_fetch_all($result_machines, MYSQLI_ASSOC);
 
   <div class="ip-container">
     <h2>Votre adresse IP est :</h2>
-    <p><?php echo $_SERVER['REMOTE_ADDR'];echo strtolower($_SERVER['HTTP_USER_AGENT']); ?></p>
+    <p><?php echo $_SERVER['REMOTE_ADDR']; ?></p>
   </div>
 </body>
 </html>
