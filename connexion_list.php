@@ -91,7 +91,7 @@ $machines = mysqli_fetch_all($result_machines, MYSQLI_ASSOC);
 </head>
 <body>
   <h1>Liste des connexions</h1>
-
+  <a href="homepage.html" class="return">Retour à l'accueil</a>
   <div class="table-container">
     <table>
       <thead>
@@ -138,9 +138,7 @@ $machines = mysqli_fetch_all($result_machines, MYSQLI_ASSOC);
 
   <div class="ip-container">
     <h2>Votre adresse IP est :</h2>
-    <p><?php echo $_SERVER['REMOTE_ADDR']; ?></p>
+    <p><?php echo $_SERVER['REMOTE_ADDR'];echo strtolower($_SERVER['HTTP_USER_AGENT']); ?></p>
   </div>
-
-  <a href="homepage.html" class="return">Retour à l'accueil</a>
 </body>
 </html>
