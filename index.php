@@ -1,87 +1,110 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php
+// Connexion à la base de données
+$dbhost = 'localhost';
+$dbname = 'save_connexions';
+$dbuser = 'webuser';
+$dbpass = 'JeSuisLeBoss$';
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page d'accueil Serveur 174</title>
-  <link rel="stylesheet" href="css\styleAccueil.css" />
-  <?php include("connexion.php"); ?>
-</head>
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
-<body>
-  <header>
-    <h1>Page d'accueil du serveur 174</h1>
-    <nav>
-    </nav>
-  </header>
-  <main>
+// Vérification de la connexion
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
-    <section id="resume" class="grey-section">
+// Récupération des informations de l'utilisateur
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+$ip_adress = $_SERVER['REMOTE_ADDR'];
+$hostname = gethostbyaddr($ip_adress);
 
-      <div class="row section-intro">
-        <div class="col-twelve">
+if ($hostname == $ip_address) {
+  $hostname = null;
+}
+// Extraction du navigateur et du système d'exploitation
+$browser = '';
+$os = '';
+$user_agent = strtolower($user_agent);
 
-          <h1>Introduction</h1>
-          <?php
-		// Code PHP à inclure dans la page
-		$date = date("d/m/Y");
-		echo "<p>Aujourd'hui, nous sommes le $date</p>";
-	?>
+if (preg_match('/msie|trident/', $user_agent)) {
+  $browser = 'Internet Explorer';
+} elseif (preg_match('/firefox/', $user_agent)) {
+  $browser = 'Firefox';
+} elseif (preg_match('/chrome/', $user_agent)) {
+  $browser = 'Chrome';
+} elseif (preg_match('/opera/', $user_agent)) {
+  $browser = 'Opera';
+} elseif (preg_match('/safari/', $user_agent)) {
+  $browser = 'Safari';
+} elseif (preg_match('/edge/', $user_agent)) {
+  $browser = 'Microsoft Edge';
+} elseif (preg_match('/vivaldi/', $user_agent)) {
+  $browser = 'Vivaldi';
+} elseif (preg_match('/brave/', $user_agent)) {
+  $browser = 'Brave';
+} elseif (preg_match('/yandex/', $user_agent)) {
+  $browser = 'Yandex Browser';
+} elseif (preg_match('/chromium/', $user_agent)) {
+  $browser = 'Chromium';
+} elseif (preg_match('/seamonkey/', $user_agent)) {
+  $browser = 'SeaMonkey';
+} elseif (preg_match('/opera neon/', $user_agent)) {
+  $browser = 'Opera Neon';
+} elseif (preg_match('/avant browser/', $user_agent)) {
+  $browser = 'Avant Browser';
+} else {
+  // Si le user agent ne correspond à aucun navigateur, on définit le navigateur comme "Terminal"
+  $browser = 'Terminal';
+}
 
-          <p class="lead">Bienvenue sur le site de l'équipe du serveur 174, nous sommes deux étudiant de l'IUT Toulouse
-            Jean-Jaures - Blagnac, et dans le cadre de la SAE S1.03 nous avons
-            mis en place un serveur web avec nos deux sites.</p>
-          <div class="left">
-          </div>
 
-          <div class="right">
+if (preg_match('/windows|win32|win64/', $user_agent)) {
+  $os = 'Windows';
+} elseif (preg_match('/ubuntu/', $user_agent)) {
+  $os = 'Ubuntu';
+} elseif (preg_match('/fedora/', $user_agent)) {
+  $os = 'Fedora';
+} elseif (preg_match('/red hat|redhat/', $user_agent)) {
+  $os = 'Red Hat';
+} elseif (preg_match('/debian/', $user_agent)) {
+  $os = 'Debian';
+} elseif (preg_match('/suse/', $user_agent)) {
+  $os = 'SUSE';
+} elseif (preg_match('/mandriva/', $user_agent)) {
+  $os = 'Mandriva';
+} elseif (preg_match('/gentoo/', $user_agent)) {
+  $os = 'Gentoo';
+} elseif (preg_match('/slackware/', $user_agent)) {
+  $os = 'Slackware';
+} elseif (preg_match('/centos/', $user_agent)) {
+  $os = 'CentOS';
+} elseif (preg_match('/linux/', $user_agent)) {
+  $os = 'Linux';
+} elseif (preg_match('/macintosh|mac os x|mac_powerpc/', $user_agent)) {
+  $os = 'Mac OS X';
+} elseif (preg_match('/android/', $user_agent)) {
+  $os = 'Android';
+} elseif (preg_match('/iphone|ipod|ipad/', $user_agent)) {
+  $os = 'iOS';
+} elseif (preg_match('/blackberry/', $user_agent)) {
+  $os = 'BlackBerry';
+} else {
+  $os = 'Unknown';
+}
 
-          </div>
-        </div>
-      </div> <!-- /section-intro-->
+// Insertion des informations dans la base de données
+if ($hostname != null) {
+  $query = "INSERT INTO Machine (hostname, navigateur, os) VALUES ('" . mysqli_real_escape_string($conn, $hostname) . "', '" . mysqli_real_escape_string($conn, $browser) . "', '" . mysqli_real_escape_string($conn, $os) . "')";
+  mysqli_query($conn, $query);
+}
+if ($hostname != null) {
+  $query = "INSERT INTO Connexion (ip, hostname, date) VALUES ('" . mysqli_real_escape_string($conn, $ip_adress) . "', '" . mysqli_real_escape_string($conn, $hostname) . "', NOW())";
+  mysqli_query($conn, $query);
+}
+else {
+  $query = "INSERT INTO Connexion (ip,date) VALUES ('" . mysqli_real_escape_string($conn, $ip_adress) . "', NOW())";
+  mysqli_query($conn, $query);
+}
+header("Location: homepage.html");
+exit;
+?>
 
-
-
-
-    </section> <!-- /resume -->
-
-    <section class="section-container-three">
-      <div class="div-container-left">
-        <div class="image-container">
-          <img src="ressources/images/photoIllanEntiere.jpg">
-        </div>
-      </div>
-      <div class="div-container-center">
-        <div class="div-container-header">
-          <h2>Découvrez nos sites personnels en cliquant sur les boutons !</h2>
-          <h3>Site English Test : Illan GABARRA</h3>
-        </div>
-        <div class="div-container-two">
-          <div class="row button-section">
-            <div class="col-twelve">
-              <span class="pos-illan">
-                <a href="illan.gab.html" class="button stroke smoothscroll">Illan GABARRA</a>
-              </span>
-            </div>
-          </div>
-
-          <div class="row button-section">
-            <div class="col-twelve">
-              <span class="pos-kylian">
-                <a href="kylian.gac.html" class="button stroke smoothscroll">Kylian GACHET</a>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="div-conainer-right">
-        <div class="image-container">
-          <img src="ressources/images/profile-pic.webp">
-        </div>
-      </div>
-    </section>
-  </main>
-</body>
-
-</html>
