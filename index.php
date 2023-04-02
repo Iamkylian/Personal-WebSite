@@ -68,9 +68,7 @@ if (preg_match('/windows|win32|win64/', $user_agent)) {
   $os = 'SUSE';
 } elseif (preg_match('/centos/', $user_agent)) {
   $os = 'CentOS';
-} elseif (preg_match('/curl/', $user_agent)) {
-  $os = 'Curl';
-}elseif (preg_match('/linux/', $user_agent)) {
+} elseif (preg_match('/linux/', $user_agent)) {
   $os = 'Linux';
 } elseif (preg_match('/macintosh|mac os x|mac_powerpc/', $user_agent)) {
   $os = 'Mac OS X';
